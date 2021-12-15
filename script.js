@@ -13,20 +13,20 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    let capChoice = playerSelection.toUpperCase();
+    let capPlayerChoice = playerSelection.toUpperCase();
     let capCompChoice = computerSelection.toUpperCase();
     
     //Check if the user is being naughty
-    if (capChoice !== "ROCK" && capChoice !== "PAPER" && capChoice !== "SCISSORS") {
+    if  (capPlayerChoice !== "ROCK" && capPlayerChoice !== "PAPER" && capPlayerChoice !== "SCISSORS") {
         return "Write rock, paper or scissors";
     }
 
     //Check for a winner or a loser based on comparing the two selections.
-    if (capChoice === "ROCK" && computerSelection === "Scissors" || capChoice === "PAPER" && computerSelection === "Rock" ||  capChoice === "SCISSORS" && computerSelection === "Paper") {
+    if  (capPlayerChoice === "ROCK" && computerSelection === "Scissors" || capPlayerChoice === "PAPER" && computerSelection === "Rock" ||  capPlayerChoice === "SCISSORS" && computerSelection === "Paper") {
         return "Player 1 is the winner!";
     }
     //If the computer's choice and the player's are the same, then it's a tie
-    else if(capChoice === capCompChoice) {
+    else if (capPlayerChoice === capCompChoice) {
 
         return "It's a tie for now";
     }
