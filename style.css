@@ -1,0 +1,45 @@
+* {
+    background-color: #5a7bb5;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #CCDCF2;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 5px;
+    height: 12vh;
+    font-size: 1.23rem;
+}
+
+div#score {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #FDFDDF;
+    margin: 8vh 0 8vh 0;
+}
+
+.player,
+.computer {
+    display: inline-block;
+}
+
+img {
+    width: 125px;
+    height: auto;
+}
+
+img:hover {
+    transform: translateY(-10%);
+    cursor: pointer;
+}
+
+div.new,
+div.classics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0 0 8vh 0;
+}

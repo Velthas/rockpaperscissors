@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <meta charset="utf-8">
-        <script src="./script.js"></script>
+        <script src="./script.js" defer></script>
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <h1>Hello, world. This game is played at the console. For now.</h1>
+        <div class="header" id="title">
+            <h1>Rock, Paper, Scissors, Spock, Lizard</h1>
+        </div>
+
+        <div id="score">
+            <div class="computer">0</div> -
+            <div class="player">0</div>
+        </div>
+
+        <div id="choices">
+            <div class="classics">
+                <div class="rock">
+                    <img src="./images/stone.png">
+                </div>
+                <div class="paper">
+                    <img src="./images/documents.png">
+                </div>
+                <div class="scissors">
+                    <img src="./images/scissors.png">
+                </div>
+            </div>
+            <div class="new">
+                <div class="lizard">
+                    <img src="./images/lizard.png">
+                </div>
+                <div class="spock">
+                    <img src="./images/vulcan.png">
+                </div>
+            </div>
+        </div>
+
+        <div id="result">  </div>
+
+        
     </body>
 </html>
