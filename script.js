@@ -14,7 +14,7 @@ const scissors = document.querySelector(".scissors");
 const lizard = document.querySelector(".lizard");
 const spock = document.querySelector(".spock");
 
-//Pass the information about player move to the playRound function. 
+//Pass the information about player move to the playRound function on click. 
 //Computer move is generated dinamically using computerPlay.
 rock.addEventListener('click', () => playRound("ROCK", computerPlay()));
 paper.addEventListener('click', () => playRound("PAPER", computerPlay()));
@@ -50,16 +50,22 @@ function computerPlay() {
 //Plays a rpsls round based on user input and randomly generated computer input.
 function playRound(playerSelection, computerSelection) {
 
+    //If the player tries to play a round once game is over, start another round
+    resetGame();
+
     //Use descendant selectors to fetch the image and highlight it with color to show player and computer choice
     let playerItemClass = `.${playerSelection.toLowerCase()} img`;
     let computerItemClass = `.${computerSelection.toLowerCase()} img`;
     highlightChoices(playerItemClass, computerItemClass);
 
-
     //Add the comment section under the scoreboard
     scoreDiv.appendChild(results);
     results.classList.add("comment");
-    
+
+    //Always make sure the scores are up to date:
+    playerScoreDiv.textContent = playerScore;
+    computerScoreDiv.textContent = computerScore;
+
     //Check for a winner or a loser based on comparing the two selections.
     if  (playerSelection === "ROCK" && computerSelection === "SCISSORS" ||
      playerSelection === "PAPER" && computerSelection === "ROCK" ||
@@ -91,11 +97,14 @@ function playRound(playerSelection, computerSelection) {
 
         results.textContent = `The machines have won this round, keep going!` 
         computerScore += 1;
-        computerScoreDiv.textContent = playerScore;
+        computerScoreDiv.textContent = computerScore;
     }
+
+    finishGame();
 
 }
 
+//This function adds a colored background to the selected items for the round
 function highlightChoices(playerItemClass, computerItemClass) {
 
     //See if there's already a highlight going on
@@ -103,7 +112,7 @@ function highlightChoices(playerItemClass, computerItemClass) {
     const computerImg = document.querySelector('.machine');
     const humanMachineTie = document.querySelector('.hmtie')
 
-    //If so, remove it
+    //If so, remove the class associated with it to eliminate it
     if (playerImg) {
         playerImg.classList.remove('human');
         computerImg.classList.remove('machine');
@@ -112,7 +121,7 @@ function highlightChoices(playerItemClass, computerItemClass) {
         humanMachineTie.classList.remove('hmtie');
     }
     
-
+    //Get the node of the element we want to highlight
     const playerItem = document.querySelector(playerItemClass);
     const computerItem = document.querySelector(computerItemClass);
 
@@ -120,8 +129,28 @@ function highlightChoices(playerItemClass, computerItemClass) {
     if (playerItemClass === computerItemClass) {
         playerItem.classList.add('hmtie');
     }
+
+    //Otherwise apply distinct classes for  human and machine choice
     else {
     playerItem.classList.add('human');
     computerItem.classList.add('machine');
+    }
+}
+
+function finishGame () {
+    if (playerScoreDiv.textContent === "5") {
+        results.textContent = "Hell yes! Well done, brother."
+    }
+
+    if (computerScoreDiv.textContent === "5") {
+        results.textContent = "Argh, the computer won this game!"
+    }
+
+}
+
+function resetGame () {
+    if (playerScoreDiv.textContent === "5" || computerScoreDiv.textContent === "5") {
+        playerScore = 0;
+        computerScore = 0;
     }
 }

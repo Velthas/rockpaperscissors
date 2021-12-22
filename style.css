@@ -1,5 +1,6 @@
 * {
-    background-color: #5a7bb5;
+    background-color: #b80022;
+    color: #FDFDDF;
 }
 
 .header {
@@ -15,20 +16,33 @@
 
 div#score {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #FDFDDF;
-    margin: 8vh 0 8vh 0;
+    margin: 4vh 0 4vh 0;
 }
 
 .player,
 .computer {
     display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
+}
+.player {
+    color: #e7c103;
 }
 
+.computer {
+    color: lawngreen;
+}
+
+
 img {
-    transition: transform ease-in 0.3s;
+    transition: transform ease-in 0.3s, border ease-in 0.6s, box-shadow ease-in 0.9s;
     width: 125px;
     height: auto;
+    max-width: 145px;
+    max-height: 145px;
+    padding: 10px;
 }
 
 img:hover {
@@ -47,20 +61,42 @@ div.classics {
 
 .comment {
     display: block;
-    margin: 2vh 0 0 0;
+    margin: 2.5vh auto;
+    width: 60vw;
+    height: 10vh;
 }
 
 .human {
-    background-color: red;
-    border-radius: 10px;
+    border: solid 1px #e7c103;
+    border-radius: 30px;
+    box-shadow: 0px 0px 40px 10px #e7c103;
 }
 
 .machine {
-    background-color: green;
-    border-radius: 10px;
+    border: solid 1px lawngreen; 
+    border-radius: 30px;
+    box-shadow: 0px 0px 40px 10px lawngreen;
+
 }
 
 .hmtie {
-    background-color: yellow;
-    border-radius: 10px;
+    border: solid 1px #fdfddf;
+    border-radius: 30px;
+    box-shadow: 0px 0px 40px 10px #fdfddf;
+}
+
+#credits {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #e7c103;
 }
