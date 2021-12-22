@@ -6,7 +6,7 @@ The game is an expansion on the game Rock, Paper, Scissors. Each player picks a 
 
 <img src="https://static.wikia.nocookie.net/bigbangtheory/images/7/7d/RPSLS.png/revision/latest/scale-to-width-down/180?cb=20120822205915"
      alt="RockPaperScissorsLizardSpock rules"
-     style="float: left; margin-right: 10px;">
+     style="float: center; margin-right: 10px;">
 
 
 ##Icons
