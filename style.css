@@ -26,6 +26,7 @@ div#score {
 }
 
 img {
+    transition: transform ease-in 0.3s;
     width: 125px;
     height: auto;
 }
@@ -42,4 +43,8 @@ div.classics {
     align-items: center;
     gap: 30px;
     margin: 0 0 8vh 0;
+}
+
+.comment {
+    display: block;
 }
