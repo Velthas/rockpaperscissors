@@ -11,21 +11,21 @@ The game is an expansion on the game Rock, Paper, Scissors. Each player picks a 
 
 As recited by Sheldon, here are the winning pairs:
 
-Scissors cuts Paper
-Paper covers Rock
-Rock crushes Lizard
-Lizard poisons Spock
-Spock smashes Scissors
-Scissors decapitates Lizard
-Lizard eats Paper
-Paper disproves Spock
-Spock vaporizes Rock
-(and as it always has) Rock crushes Scissors
+Scissors cuts Paper <br>
+Paper covers Rock <br>
+Rock crushes Lizard <br>
+Lizard poisons Spock <br>
+Spock smashes Scissors <br>
+Scissors decapitates Lizard <br>
+Lizard eats Paper <br>
+Paper disproves Spock <br>
+Spock vaporizes Rock <br>
+(and as it always has) Rock crushes Scissors <br>
 
 ## Functionality
 
  <p>On the main page, the user can click on the image corresponding to the item of their choice. The computer will make a random choice, and the two will be compared to determine a winner. The score will then be updated in real time, with a commentary of what is happening being provided through the result div.</p>
- <p>By default, the player will be assigned the color yellow, and the computer the color lime</p>
+ <p>By default, the player will be assigned the color yellow, and the computer the color lime.</p>
  <p>Once a score of five has been reached, the result paragraph will declare a winner. If the user attempts to pick an item after a game has been completed, a new one will automatically start, and the score be reset.</p>
 
 ## Design Structure
@@ -39,5 +39,5 @@ Spock vaporizes Rock
 ## Icons
 <p>
 All five of the icons displayed on the site were borrowed for free from Flaticon.com and all credits for it belong to the following artists: </p>
-1. Rock: Icongeek26
-2. Paper, Scissors, Lizard, Vulcan: Freepik
+1.Rock: Icongeek26
+2.Paper, Scissors, Lizard, Vulcan: Freepik
