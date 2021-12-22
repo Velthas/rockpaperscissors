@@ -39,5 +39,5 @@ Spock vaporizes Rock <br>
 ## Icons
 <p>
 All five of the icons displayed on the site were borrowed for free from Flaticon.com and all credits for it belong to the following artists: </p>
-1.Rock: Icongeek26
-2.Paper, Scissors, Lizard, Vulcan: Freepik
++ Rock: Icongeek26
++ Paper, Scissors, Lizard, Vulcan: Freepik
